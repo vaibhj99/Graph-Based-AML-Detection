@@ -39,6 +39,8 @@ This proof-of-concept processed a **stratified sample of 50,000 transactions** d
 **Proposed Production Architecture:**
 To deploy this on the full 6M+ row dataset, I would migrate from `pandas`/`networkx` to a distributed computing framework:
 
-1.  **Spark GraphX:** To parallelize the graph construction across a cluster.
-2.  **Neo4j:** To store the transaction network in a native Graph Database for real-time querying.
-3.  **Batch Processing:** Implement a sliding window approach (e.g., scan 1 day of data at a time) rather than loading the entire history into memory.
+ **Spark GraphX:** To parallelize the graph construction across a cluster.
+
+ **Neo4j:** To store the transaction network in a native Graph Database for real-time querying.
+
+ **Batch Processing:** Implement a sliding window approach (e.g., scan 1 day of data at a time) rather than loading the entire history into memory.
