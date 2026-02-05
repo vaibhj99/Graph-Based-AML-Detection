@@ -25,7 +25,7 @@ I built a **Forensic Graph Detection Engine** using Python (`NetworkX`) to ident
 ---
 
 ### Tech Stack
-* **Python:** Core Logic & Data Processing
-* **NetworkX:** Graph Algorithms (Centrality, Ego Graphs)
-* **Pandas:** Data Engineering
-* **Matplotlib:** Forensic Visualization
+ **Python:** Core Logic & Data Processing
+ **NetworkX:** Graph Algorithms (Centrality, Ego Graphs)
+ **Pandas:** Data Engineering
+ **Matplotlib:** Forensic Visualization
