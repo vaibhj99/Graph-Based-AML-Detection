@@ -33,11 +33,12 @@ I built a **Forensic Graph Detection Engine** using Python (`NetworkX`) to ident
  
  **Matplotlib:** Forensic Visualization
 
- ### ⚠️ Scalability Note
+ ### Scalability Note
 This proof-of-concept processed a **stratified sample of 50,000 transactions** due to local hardware constraints (RAM). The Graph Theory approach ($O(V+E)$ complexity) is computationally expensive for the full dataset of 6.3 million rows.
 
 **Proposed Production Architecture:**
 To deploy this on the full 6M+ row dataset, I would migrate from `pandas`/`networkx` to a distributed computing framework:
+
 1.  **Spark GraphX:** To parallelize the graph construction across a cluster.
 2.  **Neo4j:** To store the transaction network in a native Graph Database for real-time querying.
 3.  **Batch Processing:** Implement a sliding window approach (e.g., scan 1 day of data at a time) rather than loading the entire history into memory.
